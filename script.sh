@@ -8,6 +8,5 @@ response=$(curl -s -H "Authorization: Bearer $API_TOKEN" "https://stepik.org/api
 
 # Извлекаем значение поля "join_date" с помощью команды jq (JSON-парсер)
 join_date=$(echo $response | jq -r '.users[0].join_date')
-
 # Выводим дату присоединения
 echo "Дата присоединения к Stepik: $join_date"
